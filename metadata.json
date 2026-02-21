@@ -1,0 +1,5 @@
+{
+  "name": "GenAI Transparency Coder v2.0",
+  "description": "A React-based tool for analyzing academic articles for GenAI transparency compliance using Gemini API, PDF.js, and Tesseract.js.",
+  "requestFramePermissions": []
+}
