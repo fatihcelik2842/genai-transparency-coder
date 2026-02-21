@@ -163,7 +163,7 @@ const downloadFile = (content: string, filename: string, type: string) => {
 };
 
 export default function App() {
-  const [model, setModel] = useState('gemini-2.5-pro');
+  const [model, setModel] = useState('gemini-3.1-pro-preview');
   const [status, setStatus] = useState<ProcessingStatus>('idle');
   const [statusText, setStatusText] = useState('Waiting for document...');
   const [progress, setProgress] = useState(0);
@@ -417,19 +417,19 @@ ${['v1','v2','v3','v4','v5','v6'].map(key => {
                       >
                         {(geminiKey && (!claudeKey || provider === 'gemini')) && (
                           <>
-                            <optgroup label="🔷 Gemini 2.5 (Latest)">
+                            <optgroup label="🔷 Gemini 3.x (Preview)">
+                              <option value="gemini-3.1-pro-preview">Gemini 3.1 Pro (Preview)</option>
+                              <option value="gemini-3-pro-preview">Gemini 3 Pro (Preview)</option>
+                              <option value="gemini-3-flash-preview">Gemini 3 Flash (Preview)</option>
+                            </optgroup>
+                            <optgroup label="🔷 Gemini 2.5 (Stable)">
                               <option value="gemini-2.5-pro">Gemini 2.5 Pro</option>
                               <option value="gemini-2.5-flash">Gemini 2.5 Flash</option>
                               <option value="gemini-2.5-flash-lite">Gemini 2.5 Flash Lite</option>
                             </optgroup>
-                            <optgroup label="🔷 Gemini 2.0">
+                            <optgroup label="🔷 Gemini 2.0 (⚠️ Retiring Mar 2026)">
                               <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
                               <option value="gemini-2.0-flash-lite">Gemini 2.0 Flash Lite</option>
-                            </optgroup>
-                            <optgroup label="🔷 Gemini 1.5">
-                              <option value="gemini-1.5-pro">Gemini 1.5 Pro</option>
-                              <option value="gemini-1.5-flash">Gemini 1.5 Flash</option>
-                              <option value="gemini-1.5-flash-8b">Gemini 1.5 Flash 8B</option>
                             </optgroup>
                           </>
                         )}
